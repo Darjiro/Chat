@@ -2,7 +2,7 @@
 import socket
 import threading
 
-addr = 'https://python-socket-chat.onrender.com'
+addr = 'localhost'
 port = 9999
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((addr, port))
