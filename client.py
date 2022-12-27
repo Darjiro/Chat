@@ -7,6 +7,7 @@ ctk.set_appearance_mode('dark')
 SCREEN_SIZE = (400,400)
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+addr = 'https://python-socket-chat.onrender.com'
 
 def send_message(username, entry, text_area):
     message = entry.get()
@@ -34,7 +35,7 @@ def chat_screen(username, main_win):
 
     if username:
         try:
-            client.connect(('python-socket-chat.onrender.com', 9999))
+            client.connect((addr, 9999))
             client.send(username.encode('utf-8'))
             users_amount = client.recv(1024).decode('utf-8')
             server_status = 'Server on'

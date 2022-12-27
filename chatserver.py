@@ -5,7 +5,7 @@ import threading
 address = socket.gethostname()
 port = 9999
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind((address, port))
+server.bind(('', port))
 server.listen()
 
 #Main root
