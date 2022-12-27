@@ -2,10 +2,10 @@
 import socket
 import threading
 
-addr = socket.gethostname()
+address = socket.gethostname()
 port = 9999
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind((addr, port))
+server.bind((address, port))
 server.listen()
 
 #Main root
@@ -53,7 +53,7 @@ def recv_msg(client, username):
             break
 
 def run():
-    print(f'Server running on {addr}')
+    print(f'Server running on {address}')
 #     log_message('Server runnig', text_area_log, False)
     while True:
         client, addr = server.accept()
