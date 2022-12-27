@@ -53,7 +53,7 @@ def recv_msg(client, username):
             break
 
 def run():
-    print('Server running')
+    print(f'Server running on {addr}')
 #     log_message('Server runnig', text_area_log, False)
     while True:
         client, addr = server.accept()
