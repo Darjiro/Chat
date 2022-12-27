@@ -2,7 +2,7 @@
 import socket
 import threading
 
-addr = 'localhost'
+addr = 'https://python-socket-chat.onrender.com'
 port = 9999
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((addr, port))
@@ -67,6 +67,6 @@ def run():
 #         log_message(f'User {username} connected', text_area_log, False)
         threading.Thread(target=recv_msg, args=(client,username)).start()
 
-run()
-# threading.Thread(target=run).start()
+# run()
+threading.Thread(target=run).start()
 # root_win.mainloop()
