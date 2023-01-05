@@ -1,8 +1,0 @@
-services:
-  web:
-    build: .
-    command: python main.py --host=localhost --port=$PORT
-    environment:
-      - PORT=9999
-    ports:
-      - 9999:9999
